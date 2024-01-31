@@ -1,0 +1,115 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem;
+  gap: 2rem;
+  min-height: 100vh;
+}
+
+.title{
+  white-space: pre-wrap;
+}
+
+.buttons{
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  display: flex;
+  gap: 1rem;
+}
+.no{
+  /* position:absolute; */
+  /* right: 0; */
+  
+    /* transform: translate(20px,0); */
+}
+.button{
+  min-width: 5rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  font-size: 32px;
+  border-radius: 0.75rem;
+  background-color: lightpink;
+}
+.rotate1{
+  animation: rotate 1s infinite linear;
+}
+
+.rotate2{
+  animation: rotate 0.5s infinite linear;
+}
+
+.rotate3{
+  animation: slide 1s infinite linear;
+}
+
+.image{
+  animation: fade 4s forwards ;
+}
+
+@keyframes fade{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.agreed{
+  animation: grow 3s forwards;
+}
+
+@keyframes grow{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(10) translateY(-20px);
+  }
+  100%{
+    transform: scale(0);
+  }
+}
+
+.slide1{
+  
+  animation: flyAway 1s  linear forwards;
+}
+@keyframes flyAway{
+  from{
+    
+    transform: translateX(0px);
+  }
+  to{
+    display: none;
+    transform: translateX(1000px);
+  }
+}
+@keyframes rotate{
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slide {
+  0%{
+    transform: translateX(0px) rotate(360deg);
+  }
+  25%{
+    transform: translateY(-100px);
+  }
+  50%{
+    transform: translateY(0px) rotate(360deg) scale(0.5);
+  }
+  75%{
+    transform: translateY(100px);
+  }
+  100%{
+    transform: translateX(0px) rotate(360deg);
+  }
+}
